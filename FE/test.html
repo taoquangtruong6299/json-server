@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>querySelector() Demo</title>
+    <link rel="stylesheet" href="test.css">
+    <link type="text/css" rel="stylesheet" href="css/lightslider.css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/lightslider.js"></script>
+    <script>
+        $(document).ready(function() {
+           $("#content-slider").lightSlider({
+               loop:true,
+               keyPress:true
+           });
+           $('#image-gallery').lightSlider({
+               gallery:true,
+               item:1,
+               thumbItem:9,
+               slideMargin: 0,
+               speed:500,
+               auto:true,
+               loop:true,
+               onSliderLoad: function() {
+                   $('#image-gallery').removeClass('cS-hidden');
+               }
+           });
+       });
+   </script>
+</head>
+<body>
+    <main>
+        <div class="container-fluid">
+            <ul id="autoWidth" class="cs-hidden">
+                <li class="item-a">
+                    <div class="box">
+                        <div class="box-container">
+                            <div class="rating">
+
+                            </div>
+                            <p class="box__desc">Very impresive store. Your book made studying for the ABC certification exams a breeze. Thank you very much</p>
+                            <div class="info">
+                                <img src="" alt="" class="avatar">
+                                <div class="info-details">
+                                    <h3 class="box__info-name">Jason Huang</h3>
+                                    <p class="box__info-title">Book Lowers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="item-a">
+                    <div class="box">
+                        <div class="box-container">
+                            <div class="rating">
+
+                            </div>
+                            <p class="box__desc">Very impresive store. Your book made studying for the ABC certification exams a breeze. Thank you very much</p>
+                            <div class="info">
+                                <img src="" alt="" class="avatar">
+                                <div class="info-details">
+                                    <h3 class="box__info-name">Jason Huang</h3>
+                                    <p class="box__info-title">Book Lowers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="item-a">
+                    <div class="box">
+                        <div class="box-container">
+                            <div class="rating">
+
+                            </div>
+                            <p class="box__desc">Very impresive store. Your book made studying for the ABC certification exams a breeze. Thank you very much</p>
+                            <div class="info">
+                                <img src="" alt="" class="avatar">
+                                <div class="info-details">
+                                    <h3 class="box__info-name">Jason Huang</h3>
+                                    <p class="box__info-title">Book Lowers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="item-a">
+                    <div class="box">
+                        <div class="box-container">
+                            <div class="rating">
+
+                            </div>
+                            <p class="box__desc">Very impresive store. Your book made studying for the ABC certification exams a breeze. Thank you very much</p>
+                            <div class="info">
+                                <img src="" alt="" class="avatar">
+                                <div class="info-details">
+                                    <h3 class="box__info-name">Jason Huang</h3>
+                                    <p class="box__info-title">Book Lowers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="item-a">
+                    <div class="box">
+                        <div class="box-container">
+                            <div class="rating">
+
+                            </div>
+                            <p class="box__desc">Very impresive store. Your book made studying for the ABC certification exams a breeze. Thank you very much</p>
+                            <div class="info">
+                                <img src="" alt="" class="avatar">
+                                <div class="info-details">
+                                    <h3 class="box__info-name">Jason Huang</h3>
+                                    <p class="box__info-title">Book Lowers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="item-a">
+                    <div class="box">
+                        <div class="box-container">
+                            <div class="rating">
+
+                            </div>
+                            <p class="box__desc">Very impresive store. Your book made studying for the ABC certification exams a breeze. Thank you very much</p>
+                            <div class="info">
+                                <img src="" alt="" class="avatar">
+                                <div class="info-details">
+                                    <h3 class="box__info-name">Jason Huang</h3>
+                                    <p class="box__info-title">Book Lowers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+
+
+        </div>
+        <!-- <div class="item">
+            <ul id="content-slider" class="content-slider">
+                <li>
+                    <h3>1</h3>
+                </li>
+                <li>
+                    <h3>2</h3>
+                </li>
+                <li>
+                    <h3>3</h3>
+                </li>
+                <li>
+                    <h3>4</h3>
+                </li>
+                <li>
+                    <h3>5</h3>
+                </li>
+                <li>
+                    <h3>6</h3>
+                </li>
+            </ul>
+        </div> -->
+    </main>
+    <script src="test.js"></script>
+</body>
+</html>
