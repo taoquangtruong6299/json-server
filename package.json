@@ -1,0 +1,29 @@
+{
+  "name": "json-server",
+  "version": "1.0.0",
+  "description": "how to use json-server",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon main.js",
+    "start": "node generate-data.js && node main.js",
+    "generate-data": "node generate-data.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taoquangtruong6299/json-server.git"
+  },
+  "keywords": [
+    "json-server"
+  ],
+  "author": "penpao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taoquangtruong6299/json-server/issues"
+  },
+  "homepage": "https://github.com/taoquangtruong6299/json-server#readme",
+  "devDependencies": {
+    "faker": "^5.5.3",
+    "nodemon": "^2.0.13"
+  }
+}

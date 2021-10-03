@@ -1,0 +1,20 @@
+@baseUrl = http://localhost:3000/api
+# @name getAllUsers
+GET {{baseUrl}}/users
+
+###
+
+# @name addNewUsers
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+   "name": "truong",
+    "email": "abc123@gmail.com",
+    "password": "12345678",
+    "admin": true,
+    "phone": "0123456789",
+    "city": "",
+    "street": "",
+    "district": ""
+}
