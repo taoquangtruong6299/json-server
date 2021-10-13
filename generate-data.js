@@ -65,15 +65,81 @@ const randomUserList = (n) =>{
 
   return userList;
 }
+
+const randomOrderList = (userList,numberOfOrder) =>{
+  if(numberOfOrder <= 0 ) return [];
+  const orderList = [];
+  for(const user of userList) {
+    Array.from(new Array(numberOfOrder)).forEach(() => {
+      const order = {
+        id: faker.random.uuid(),
+        userId: user.id,
+        status: "",
+        tax: "",
+        fristName: "",
+        middleName: "",
+        lastName: "",
+        phone: "",
+        email: "",
+        address: "",
+        createdAt: Date.now(),
+        updatedAt: Date.now(),
+
+
+      };
+      orderList.push(order);
+    });
+  }
+
+  return orderList;
+}
+
+const randomOrderItemList = (orderList,productList,n) =>{
+  if(n <= 0 ) return [];
+  const orderItemsList = [];
+
+  for(const order of orderList) {
+    for(const product of productList) {
+      Array.from(new Array(n)).forEach(() => {
+        const orderItem = {
+          id: faker.random.uuid(),
+          orderId: order.id,
+          productId: product.id,
+          quantity: 2,
+          discount: 0,
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
+
+
+        };
+        orderItemsList.push(orderItem);
+      });
+    }
+  }
+
+  return orderItemsList;
+}
 //iffe
 (()=>{
   const categoryList = randomCategoryList(2);
   const productList = randomProductList(categoryList, 5);
   const userList = randomUserList(3);
+  const orderList = randomOrderList(userList,2);
+  const orderItems = randomOrderItemList(orderList,productList,1);
   const db = {
     users: userList,
     categories: categoryList,
     products: productList,
+    productReview: [],
+    stock: [],
+    stockStatus: [],
+    order: orderList,
+    orderItems: orderItems,
+    transaction: [],
+    shipping: [],
+    shippingOption: [],
+    shippingVendors: [],
+    shippingWarehouse: []
   };
 
 

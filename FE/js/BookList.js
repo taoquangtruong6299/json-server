@@ -1,13 +1,20 @@
 
-  const renderProducts = async () =>{
-    let uri = 'http://localhost:3000/api/products';
-    const res = await fetch(uri);
-    const products = await res.json();
-    console.log(products);
-    var data = document.querySelector('.dataGrid')
-    let template = '';
-    products.forEach(product => {
-      template += `
+
+const renderProducts = async (term) =>{
+  console.log(term);
+  let uri = 'http://localhost:3000/api/products?_sort=price&_order=desc';
+
+  if(term) {
+    uri += `&q=${term}`;
+  }
+
+  const res = await fetch(uri);
+  const products = await res.json();
+  console.log(products);
+  var data = document.querySelector('.dataGrid');
+  let template = '';
+  products.forEach(product => {
+    template += `
 
           <div class="card">
             <a href="/FE/BooksDetail.html?id=${product.id}">
@@ -54,4 +61,10 @@
     });
     data.innerHTML = template;
   }
+  var searchForm = document.querySelector('.search');
+  searchForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    renderProducts(searchForm.term.value.trim());
+  })
+
   window.addEventListener('DOMContentLoaded', () => renderProducts() );
