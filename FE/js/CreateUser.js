@@ -7,7 +7,7 @@ var createUser = async (e) => {
   }
 
 
-  await fetch('http://localhost:3000/api/users', {
+  await fetch('http://localhost:3000/users', {
     method: 'POST',
     body: JSON.stringify(data),
     headers: { 'Content-Type': 'application/json'}

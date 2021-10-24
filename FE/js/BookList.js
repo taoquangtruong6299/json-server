@@ -2,7 +2,7 @@
 
 const renderProducts = async (term) =>{
   console.log(term);
-  let uri = 'http://localhost:3000/api/products?_sort=price&_order=desc';
+  let uri = 'http://localhost:3000/products?_sort=price&_order=desc';
 
   if(term) {
     uri += `&q=${term}`;
@@ -60,11 +60,14 @@ const renderProducts = async (term) =>{
       `
     });
     data.innerHTML = template;
+
   }
   var searchForm = document.querySelector('.search');
+  console.log(searchForm);
   searchForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     renderProducts(searchForm.term.value.trim());
+
   })
 
   window.addEventListener('DOMContentLoaded', () => renderProducts() );
